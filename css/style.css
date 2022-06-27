@@ -97,6 +97,11 @@ img {
   color: #000000;
 }
 
+.logo-first,
+.logo-second {
+  outline-color: var(--accent-text-color);
+}
+
 /* .header-nav {} */
 
 .header-list {
@@ -122,6 +127,15 @@ img {
   color: var(--accent-text-color);
 }
 
+.hover {
+  outline-color: var(--accent-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* .current {} */
+
 .current::after {
   content: ""; /* не работает без этой строки */
   width: 100%;
@@ -137,6 +151,10 @@ img {
   color: var(--secondary-text-color);
   display: flex;
   align-items: center;
+  outline-color: var(--accent-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover:hover,
@@ -145,6 +163,9 @@ img {
 .hover-contacts:focus {
   color: var(--accent-text-color);
 }
+
+/* transition: transform 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 
 .header-contacts {
   display: flex;
@@ -220,6 +241,15 @@ img {
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
+  outline: transparent;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  transform: scale(90%);
 }
 
 /*-- секция 2 description --*/
@@ -399,6 +429,10 @@ img {
   align-items: center;
   justify-content: center;
   color: var(--icons-light-color);
+  outline: transparent;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-link:hover,
@@ -448,6 +482,9 @@ img {
   margin-right: 30px;
   border: 1px solid var(--icons-light-color);
   border-radius: 4px;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-item:last-child {
@@ -471,9 +508,14 @@ img {
   width: 100%;
   height: 100%;
   fill: var(--icons-light-color);
+  outline-color: var(--accent-text-color);
 }
 
-/* .clients-icon {} */
+.clients-icon {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 /*-- футер --*/
 
@@ -527,11 +569,19 @@ img {
 .footer-contacts-address {
   color: var(--title-text-color);
   background-color: #2f303a;
+  outline: transparent;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-contacts {
   color: var(--small-text-color);
   background-color: #2f303a;
+  outline: transparent;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-contacts-address:focus,
@@ -582,6 +632,10 @@ img {
   justify-content: center;
   color: var(--title-text-color);
   background: rgba(255, 255, 255, 0.1);
+  outline: transparent;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover,
@@ -633,6 +687,10 @@ img {
   padding-bottom: 50px;
 }
 
+/* .buttons-item {
+  position: relative;
+} */
+
 .buttons-properties {
   min-width: 73px;
   height: 38px;
@@ -645,9 +703,11 @@ img {
   letter-spacing: 0.03em;
   background-color: var(--buttons-background-color);
   padding: 6px 22px 6px 22px;
+  outline: transparent;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* .buttons-item {} */
 
 .buttons-item:not(:last-child) {
   margin-right: 8px;
@@ -660,6 +720,11 @@ img {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
+/* transform: rotate(90deg);
+  transition-property: rotate;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 
 /*-- часть 2 работы --*/
 
@@ -707,7 +772,7 @@ img {
   height: 100%;
   transform: translateY(100%);
   transition: transform 250ms linear;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   overflow: auto;
 }
 
